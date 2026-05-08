@@ -45,6 +45,27 @@ import SwiftGIFKit
 
 ---
 
+# Load GIF Using Only Name
+
+```swift
+import SwiftGIFKit
+
+imageView.loadGif(name: "demo")
+```
+
+`demo.gif` must be added inside your Xcode project with target membership enabled.
+
+The package automatically loads the GIF using:
+
+```swift
+Bundle.main.url(
+    forResource: "demo",
+    withExtension: "gif"
+)
+```
+
+---
+
 # Load Remote GIF
 
 ```swift

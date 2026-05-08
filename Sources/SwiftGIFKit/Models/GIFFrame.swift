@@ -19,7 +19,7 @@ public extension UIImage {
             return nil
         }
 
-        return animatedImageWithSource(source)
+        return GIFAnimator.animatedImage(with: source)
     }
 
     static func gif(url: String) -> UIImage? {
@@ -37,7 +37,7 @@ public extension UIImage {
     static func gif(name: String) -> UIImage? {
 
         guard
-            let url = Bundle.module.url(
+            let url = Bundle.main.url(
                 forResource: name,
                 withExtension: "gif"
             ),
